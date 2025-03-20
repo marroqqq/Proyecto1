@@ -121,8 +121,26 @@ nav ul li a {
 footer {
   background-color: black;
   color: white;
-  text-align: center;
-  padding: 20px;
+  justify-content: space-between;
+  padding: 40px;
+  padding-left: 0px;
+  margin-top: 20px;
+}
+footer section {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+footer section ul {
+  font-size: 16px;
+  margin: 10px;
+  list-style: none;
+}
+footer section ul li {
+  padding-top: 10px;
+  font-size: 14px;
+}
+footer section ul li:first-child {
   margin-top: 20px;
 }
 
@@ -132,12 +150,36 @@ footer a {
   margin: 0 10px;
 }
 
+#socials {
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+#X {
+  display: block;
+  width: 25%;
+  height: 25%;
+  border-radius: 12px;
+  background-color: white;
+}
+#copy {
+  display: flex;
+  padding-left: 3%;
+  padding-top: 80px;
+  color: rgba(255, 255, 255, 0.6);
+  justify-content: space-around;
+}
+#copy img {
+  width: 15%;
+}
+#copy a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 @media (max-width: 900px) {
   .productos {
-    grid-template-columns: repeat(
-      3,
-      1fr
-    ); /* Ajusta a 3 columnas en pantallas más pequeñas */
+    grid-template-columns: repeat(3, 1fr);
   }
   .banner img {
     height: 400px;
@@ -151,10 +193,7 @@ footer a {
 }
 @media (max-width: 690px) {
   .productos {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    ); /* Ajusta a 2 columnas en pantallas pequeñas */
+    grid-template-columns: repeat(2, 1fr);
   }
   .banner img {
     height: 300px;
@@ -169,7 +208,7 @@ footer a {
 
 @media (max-width: 480px) {
   .productos {
-    grid-template-columns: 1fr; /* Ajusta a 1 columna en pantallas muy pequeñas */
+    grid-template-columns: 1fr;
   }
   .banner img {
     height: 200px;
